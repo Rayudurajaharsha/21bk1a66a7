@@ -21,7 +21,6 @@ const calculateAverage = (numbers) => {
   return (sum / numbers.length).toFixed(2);
 };
 
-// Existing GET route
 router.get('/:type', async (req, res) => {
   const { type } = req.params;
   const validTypes = ['primes', 'fibo', 'even', 'rand'];
@@ -44,7 +43,6 @@ router.get('/:type', async (req, res) => {
   });
 });
 
-// New POST route
 router.post('/', (req, res) => {
   const { type, numbers } = req.body;
   const validTypes = ['primes', 'fibo', 'even', 'rand'];
